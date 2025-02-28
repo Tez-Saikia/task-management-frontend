@@ -15,10 +15,11 @@ const TaskList = ({
     try {
       const taskIndex = tasks.findIndex((task) => task.id === id);
       if (taskIndex !== -1) {
-        const updatedTask = { ...tasks[taskIndex], status };
-
-        await updateTaskAPI(updatedTask); 
-
+        const updatedImportance: Task["importance"] = status === "Done" ? "Complete" : "Low"; 
+        const updatedTask: Task = { ...tasks[taskIndex], status, importance: updatedImportance };
+  
+        await updateTaskAPI(updatedTask);
+  
         setLocalTasks((prevTasks) =>
           prevTasks.map((t) => (t.id === id ? updatedTask : t))
         );
@@ -27,6 +28,7 @@ const TaskList = ({
       console.error("Error updating task status:", error);
     }
   };
+  
 
   return (
     <div className="task-list-container">
