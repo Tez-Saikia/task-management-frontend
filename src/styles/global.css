@@ -1,0 +1,11 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.home_container {
+  width: 97%;
+  padding-top:3rem ;
+  margin: 0 auto;
+}
