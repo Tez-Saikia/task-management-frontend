@@ -1,51 +1,82 @@
-# React + TypeScript + Vite
+# Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Live Demo
 
-Currently, two official plugins are available:
+- **Frontend:** [Live on Netlify](https://todo-task-management-frontend.netlify.app)
+- **Backend:** [Live on Render](https://task-manager-backend-upfr.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## Expanding the ESLint configuration
+- Create, Read, Update, and Delete (CRUD) tasks
+- Category slider for task status management
+- Async API interactions
+- Deployed frontend and backend
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+### Frontend
+- **Framework:** React (TypeScript)
+- **State Management:** React Hooks, Context API
+- **Styling:** CSS 
+- **Form Handling:** Validation & error handling with native form handling
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Backend
+- **Framework:** Node.js with Express (TypeScript)
+- **Data Storage:** JSON file 
+- **Error Handling:** Proper API validation and error handling
+
+## 🔧 Installation & Setup
+
+### 1️⃣ Clone the Repositories
+
+#### Clone the Frontend:
+```sh
+git clone https://github.com/Tez-Saikia/task-management-frontend.git
+cd task-management-frontend
+```
+#### Clone the Backend:
+```sh
+git clone https://github.com/Tez-Saikia/task-manager-backend.git
+cd task-manager-backend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2️⃣ Frontend Setup
+```sh
+cd task-management-frontend
+npm install
+npm run dev
 ```
-# task-management-frontend
+
+### 3️⃣ Backend Setup
+```sh
+cd task-manager-backend
+npm install
+npm run dev
+```
+
+## 📁 API Endpoints
+
+### Task Endpoints
+- `GET /api/tasks` - Fetch all tasks
+- `POST /api/tasks` - Create a new task
+- `PUT /api/tasks/:id` - Update a task
+- `DELETE /api/tasks/:id` - Delete a task
+
+## 🏠 Deployment
+
+- **Frontend:** Netlify
+- **Backend:** Render
+- **Environment Variables:** Ensuring the frontend API interacts with the deployed backend
+
+## 🎯 Features Implementation
+- **Category Slider:** Allows switching between "To Do", "In Progress", and "Done"
+- **Async API Calls:** Used for fetching and updating task data efficiently
+
+## 🐟 License
+
+This project is open-source and available for modification and distribution.
+
+## 🎉 Thank You!
+
+Thank you for checking out the project! Feel free to contribute or provide feedback! 🚀
+
